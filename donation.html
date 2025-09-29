@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Dino's Foundation</title>
+    <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Inter font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[var(--color-pale-green)] text-[var(--color-dark-teal)]">
+
+    <!-- Header Section -->
+   <header id="main-header" class="relative">
+        <nav class="relative">
+            <!-- Logo replaced by an image -->
+            <a href="index.html" class="text-3xl font-bold text-[var(--color-dark-teal)] z-10 flex items-center">
+                <img src="images/android-chrome-192x192.png" alt="Dino's Foundation Logo" class="h-10 w-10 rounded-full mr-2">
+                <span class="hidden sm:inline">Dino's Foundation</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="whoweare.html" class="text-[var(--color-dark-teal)] hover:text-[var(--color-light-teal)] transition-colors">Who We Are</a>
+                <a href="projects.html" class="text-[var(--color-dark-teal)] hover:text-[var(--color-light-teal)] transition-colors">Our Projects</a>
+                <a href="getinvolved.html" class="text-[var(--color-dark-teal)] hover:text-[var(--color-light-teal)] transition-colors">Get Involved</a>
+                <a href="contact.html" class="text-[var(--color-dark-teal)] hover:text-[var(--color-light-teal)] transition-colors">Contact Us</a>
+                <a href="donation.html" class="bg-[var(--color-light-teal)] hover:bg-[var(--color-dark-teal)] text-white font-bold py-2 px-4 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                    Donate
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="flex items-center z-10 md:hidden">
+                <button id="hamburger-button" class="hamburger">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <a href="whoweare.html" class="mobile-menu-link">Who We Are</a>
+            <a href="projects.html" class="mobile-menu-link">Our Projects</a>
+            <a href="getinvolved.html" class="mobile-menu-link">Get Involved</a>
+            <a href="contact.html" class="mobile-menu-link">Contact Us</a>
+            <a href="donation.html" class="bg-[var(--color-light-teal)] hover:bg-[var(--color-dark-teal)] text-white font-bold py-2 px-4 rounded-full shadow-lg transition-transform transform hover:scale-105 mt-8">
+                Donate
+            </a>
+        </div>
+    </div>
+
+    <!-- Donation Hero Section -->
+    <section class="relative bg-[var(--color-dark-teal)] text-white py-20 md:py-32">
+        <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('images/fac/fac3.jpg');"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight text-white mb-4">Make a Donation</h1>
+            <p class="text-xl md:text-2xl text-[var(--color-pale-green)] max-w-2xl mx-auto mb-8">
+                Your contribution directly supports our mission to empower children.
+            </p>
+        </div>
+    </section>
+
+    <!-- Donation Information Section -->
+    <section id="donation-info" class="py-16 bg-[var(--color-pale-green)]">
+        <div class="container mx-auto px-4 md:px-0 max-w-5xl">
+            <div class="p-8 rounded-2xl shadow-xl bg-white mb-12">
+                <h3 class="text-4xl font-bold text-center text-[var(--color-dark-teal)] mb-8">Your Impact</h3>
+                <p class="text-lg leading-relaxed mb-8 text-center">
+                    Every donation, no matter the size, helps us provide essential resources and support to children in need. Here's how your contribution can make a difference.
+                </p>
+                <div class="grid sm:grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Impact Card 1 -->
+                    <div class="p-6 bg-[var(--color-pale-green)] rounded-2xl shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-[var(--color-dark-teal)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6a4 4 0 100 8m-2-4h4m-7 7v-3m10 0v3M3 17a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 00-2-2H5a2 2 0 00-2 2v3z" />
+                        </svg>
+                        <h4 class="text-2xl font-bold text-[var(--color-light-teal)] mb-2">$25 provides school supplies for one child.</h4>
+                        <p class="text-sm text-[var(--color-dark-teal)]">
+                            Help a child start the school year with everything they need to succeed in the classroom.
+                        </p>
+                    </div>
+                    <!-- Impact Card 2 -->
+                    <div class="p-6 bg-[var(--color-pale-green)] rounded-2xl shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-[var(--color-dark-teal)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A2 2 0 013 15.191V9.809a2 2 0 011.553-1.884L9 5m0 15v-5.5a2.5 2.5 0 00-2.5-2.5h-1a2.5 2.5 0 01-2.5-2.5V9m10 11l5.447-2.724A2 2 0 0021 15.191V9.809a2 2 0 00-1.553-1.884L15 5m0 15v-5.5a2.5 2.5 0 012.5-2.5h1a2.5 2.5 0 002.5-2.5V9m-9-5.5v2.5m-3.5 0h7.5" />
+                        </svg>
+                        <h4 class="text-2xl font-bold text-[var(--color-light-teal)] mb-2">$50 funds a mentorship session.</h4>
+                        <p class="text-sm text-[var(--color-dark-teal)]">
+                            Provide a child with guidance and support from a caring mentor who can help them navigate challenges.
+                        </p>
+                    </div>
+                    <!-- Impact Card 3 -->
+                    <div class="p-6 bg-[var(--color-pale-green)] rounded-2xl shadow-md">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto mb-4 text-[var(--color-dark-teal)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.143M21 21v-7a2 2 0 00-2-2h-7" />
+                        </svg>
+                        <h4 class="text-2xl font-bold text-[var(--color-light-teal)] mb-2">$100 supports a community program.</h4>
+                        <p class="text-sm text-[var(--color-dark-teal)]">
+                            Help us run a vital community program, such as a health clinic or a summer camp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section id="donate-form" class="py-16 bg-white">
+        <div class="container mx-auto px-4 md:px-0 max-w-2xl">
+            <h3 class="text-4xl font-bold text-center text-[var(--color-dark-teal)] mb-8">Donate Now</h3>
+            <div class="p-8 rounded-2xl shadow-xl bg-[var(--color-pale-green)]">
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="amount" class="block text-sm font-medium text-[var(--color-dark-teal)]">Donation Amount</label>
+                        <div class="mt-1 flex rounded-md shadow-sm">
+                            <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-[var(--color-dark-teal)] text-sm">$</span>
+                            <input type="number" id="amount" name="amount" class="flex-1 block w-full rounded-none rounded-r-md border-gray-300 focus:border-[var(--color-light-teal)] focus:ring-[var(--color-light-teal)]">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-medium text-[var(--color-dark-teal)] mb-2">Choose a Tier</label>
+                        <div class="flex flex-wrap justify-center gap-4">
+                            <button type="button" class="px-6 py-2 border rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[var(--color-light-teal)] focus:ring-offset-2 bg-white text-[var(--color-dark-teal)] hover:bg-[var(--color-light-teal)] hover:text-white transition-colors">
+                                $25
+                            </button>
+                            <button type="button" class="px-6 py-2 border rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[var(--color-light-teal)] focus:ring-offset-2 bg-white text-[var(--color-dark-teal)] hover:bg-[var(--color-light-teal)] hover:text-white transition-colors">
+                                $50
+                            </button>
+                            <button type="button" class="px-6 py-2 border rounded-full text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[var(--color-light-teal)] focus:ring-offset-2 bg-white text-[var(--color-dark-teal)] hover:bg-[var(--color-light-teal)] hover:text-white transition-colors">
+                                $100
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-[var(--color-dark-teal)] hover:bg-[var(--color-light-teal)] text-white font-bold py-2 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                            Donate
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[var(--color-dark-teal)] py-12 px-6 text-white">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- About Section -->
+            <div>
+                <h4 class="text-2xl font-bold text-[var(--color-pale-green)] mb-4">Dino's Foundation</h4>
+                <p class="text-gray-200">
+                    Dedicated to providing children with the support they need to build a brighter future.
+                </p>
+            </div>
+            <!-- Navigation Links -->
+            <div>
+                <h4 class="text-xl font-bold text-gray-200 mb-4">Navigation</h4>
+                <ul class="space-y-2">
+                    <li><a href="whoweare.html" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">Who We Are</a></li>
+                    <li><a href="projects.html" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">Our Projects</a></li>
+                    <li><a href="getinvolved.html" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">Get Involved</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Social Media Links -->
+            <div>
+                <h4 class="text-xl font-bold text-gray-200 mb-4">Follow Us</h4>
+                <ul class="flex space-x-4">
+                    <!-- Facebook Icon -->
+                    <li><a href="#" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">
+                        <span class="sr-only">LInkedIn</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor" aria-hidden="true" class="w-6 h-6"><path d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z"/></svg>
+                    </a></li>
+                    
+                    <!-- Twitter Icon -->
+                    <li><a href="#" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">
+                        <span class="sr-only">Twitter</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 640 640" fill="currentColor" aria-hidden="true" class="w-6 h-6"><path d="M453.2 112L523.8 112L369.6 288.2L551 528L409 528L297.7 382.6L170.5 528L99.8 528L264.7 339.5L90.8 112L236.4 112L336.9 244.9L453.2 112zM428.4 485.8L467.5 485.8L215.1 152L173.1 152L428.4 485.8z"/></svg>
+                    </a></li>
+                    
+                    <!-- Instagram Icon -->
+                    <li><a href="#" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">
+                        <span class="sr-only">Instagram</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true" class="w-6 h-6"><path d="M224.3 141a115 115 0 1 0 -.6 230 115 115 0 1 0 .6-230zm-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1 -.6-149.2zm93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1 -53.6 0zm129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                    </a></li>
+                </ul>
+            </div>
+            <!-- Contact Section -->
+            <div>
+                <h4 class="text-xl font-bold text-gray-200 mb-4">Contact Us</h4>
+                <p class="text-gray-400">
+                    Email: dinofoundation1@gmail.com<br>
+                    Phone: +234 815 947 0520
+                </p>
+            </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-[var(--color-light-teal)] text-center">
+                <p class="text-gray-500 text-sm">&copy; 2025 Dino's Foundation. All Rights Reserved.</p>
+  <p class="text-gray-500 text-sm"> site by. <a href="https://www.instagram.com/nss_justin/" class="text-gray-400 hover:text-[var(--color-light-teal)] transition-colors">NSS</a> </p>
+  
+  
+        </div>
+    </footer>
+    
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

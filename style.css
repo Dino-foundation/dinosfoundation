@@ -1,0 +1,163 @@
+/* Dino's Foundation color palette */
+:root {
+    --color-pale-green: #e2edcf;
+    --color-dark-teal: #1e4a42;
+    --color-light-teal: #3f9185;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-pale-green);
+    color: var(--color-dark-teal);
+}
+
+/* --- Header Styles --- */
+#main-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+#main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid transparent;
+}
+
+#main-header.scrolled nav,
+#main-header:not(.scrolled):hover nav {
+    background: rgba(226, 237, 207, 0.42);
+    border-radius: 9999px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid transparent;
+}
+
+#main-header nav a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    color: var(--color-dark-teal);
+}
+
+#main-header.scrolled nav a,
+#main-header:not(.scrolled):hover nav a {
+    color: var(--color-dark-teal);
+}
+#main-header.scrolled nav a:hover,
+#main-header:not(.scrolled):hover nav a:hover {
+    color: var(--color-light-teal);
+}
+
+/* --- Hamburger Menu Styles --- */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 50;
+    position: relative;
+}
+
+.hamburger-bar {
+    width: 2rem;
+    height: 0.25rem;
+    background-color: var(--color-dark-teal);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+#main-header.scrolled .hamburger-bar,
+#main-header:not(.scrolled):hover .hamburger-bar {
+    background-color: var(--color-dark-teal);
+}
+
+.hamburger.open .hamburger-bar {
+    background-color: var(--color-dark-teal);
+}
+
+.hamburger.open .hamburger-bar:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.hamburger.open .hamburger-bar:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.hamburger.open .hamburger-bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 74, 66, 0.9);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 40;
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-content {
+    text-align: center;
+}
+
+.mobile-menu-link {
+    display: block;
+    font-size: 2rem;
+    color: var(--color-pale-green);
+    font-weight: 600;
+    padding: 1rem;
+    transition: color 0.3s;
+}
+
+.mobile-menu-link:hover {
+    color: var(--color-light-teal);
+}
+
+/* Glassmorphism card for projects page */
+.glassmorphism-card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.glassmorphism-card:hover {
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+}
